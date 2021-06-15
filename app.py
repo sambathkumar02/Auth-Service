@@ -4,25 +4,17 @@ from flask_restful import Resource,Api,reqparse,marshal_with
 import bcrypt
 from sqlalchemy.sql.elements import Null
 
-
 request=reqparse.RequestParser()
 request.add_argument("email",type=str,help="invalid Email",required=True)
 request.add_argument("password",type=str,help="password",required=True)
 
-
 app=Flask(__name__)
 api=Api(app)
-
 
 app.config['SQLALCHEMY_DATABASE_URI']="postgresql://postgres:0000@localhost:5432/crud"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=True
 
-
-
-
 db=SQLAlchemy(app)
-
-
 
 
 class Login_Details(db.Model):
@@ -39,7 +31,6 @@ class Login_Details(db.Model):
     
 db.create_all()
         
-
 
 def EmailInputFilter(input):
     data=input.strip()
@@ -64,14 +55,6 @@ def EmailInputFilter(input):
 
 
 
-            
-    
-
-
-
-
-
-
 class Login(Resource):
     def post(self):
         args=request.parse_args()
@@ -90,8 +73,6 @@ class Login(Resource):
         except Exception:
             print(Exception)
             return {"Auth":"False","messgae":"Authentication Failed"}
-
-
 
 
 class Signup(Resource):
@@ -117,8 +98,6 @@ class ForgotPass(Resource):
 api.add_resource(Login,"/login")
 api.add_resource(Signup,"/signup")
 api.add_resource(ForgotPass,"/forgotpass/{id}")
-
-
 
 
 
