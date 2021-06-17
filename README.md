@@ -10,8 +10,8 @@
 ## Endpoints
 
 |Endpoints | Methods |
----    
-/Login |
+|----------|---------|    
+|/Login ||
 /signup |
 /Forgotpass|
 /changepasss/<token>|
