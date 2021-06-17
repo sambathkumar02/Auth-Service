@@ -11,7 +11,7 @@
 
 |Endpoints | Methods |
 |----------|---------|    
-|/Login ||
-/signup |
-/Forgotpass|
-/changepasss/<token>|
+|/Login |POST|
+/signup |POST|
+/Forgotpass|POST|
+/changepasss/<token>|POST|
