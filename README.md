@@ -1,6 +1,7 @@
 # Auth Micro Service
-  This Project is a Basic Authentication microservice using Flask,Postgres and SQLAlchemy as ORM.
-  
+  This Project is a Basic Authentication microservice using Flask,Postgres and SQLAlchemy as ORM.This project implements Login,Signup,and Forgot password functionality
+securely.
+
 ## Features
 - Forgot password feature
 - SQL Injection FIltering
