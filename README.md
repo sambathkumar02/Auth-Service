@@ -9,8 +9,8 @@
 
 ## Endpoints
 
-Endpoints | Methods |
----        
+|Endpoints | Methods |
+---    
 /Login |
 /signup |
 /Forgotpass|
